@@ -1,0 +1,38 @@
+baseURL: https://dlarsen5.github.io/blog-host-trial-hugo/
+title: TEST hosting trial
+locale: en-US
+theme: PaperMod
+buildFuture: true
+enableRobotsTXT: true
+outputs:
+  home: [HTML, RSS]
+  section: [HTML, RSS]
+params:
+  env: production
+  comments: true
+  ShowReadingTime: false
+  ShowCodeCopyButtons: false
+  disableThemeToggle: true
+  defaultTheme: light
+  DateFormat: '2006-01-02'
+  mainSections: [posts]
+  homeInfoParams:
+    Title: TEST hosting trial
+    Content: 'This is a TEST site, not a real publication. Read [the TEST post](posts/hosting-trial-test-post/) or [finished books](books/).'
+menu:
+  main:
+    - name: posts
+      pageRef: /posts
+      weight: 10
+    - name: books
+      pageRef: /books
+      weight: 20
+    - name: rss
+      url: index.xml
+      weight: 30
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false

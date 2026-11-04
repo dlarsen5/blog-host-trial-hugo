@@ -1,0 +1,13 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>{{ .Title }}</title><link>{{ .Permalink }}</link><description>{{ site.Title }}</description>
+<language>{{ site.Language.Locale }}</language>
+<atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/rss+xml"/>
+{{ $pages := .RegularPages }}{{ if .IsHome }}{{ $pages = site.RegularPages }}{{ end }}
+{{ range $pages }}<item>
+<title>{{ .Title }}</title><link>{{ .Permalink }}</link><guid>{{ .Permalink }}</guid>
+<pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+<description>{{ .Content | html }}</description>
+</item>{{ end }}
+</channel></rss>

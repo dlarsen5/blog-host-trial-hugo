@@ -1,0 +1,138 @@
+/* NTRN Tech v3.2.0 — generated from tokens/tokens.json. Do not edit; change tokens.json and regenerate. */
+@font-face { font-family: 'JetBrains Mono NL'; src: url('../../core/fonts/JetBrainsMonoNL-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'JetBrains Mono NL'; src: url('../../core/fonts/JetBrainsMonoNL-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Roboto Slab'; src: url('../../core/fonts/RobotoSlab-Regular-latin.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+:root, [data-theme="nostromo"] {
+  --surface-0: #0a0a0b;
+  --surface-1: #111113;
+  --surface-2: #18181b;
+  --selection: #232328;
+  --line: #2a2a2f;
+  --line-strong: #6e6d69;
+  --ink: #e3e1db;
+  --ink-bright: #f3f1ec;
+  --ink-muted: #94928c;
+  --inverse: #e3e1db;
+  --on-inverse: #0a0a0b;
+  --focus: #f3f1ec;
+  --atmos: var(--ink-bright);
+  --atmos-dim: #5f5e5a;
+  --alarm: #ff4a3d;
+  --alarm-bg: #2b0f0d;
+  --on-alarm: #0a0a0b;
+  --ghost: rgba(227,225,219,0.22);
+}
+[data-theme="graphite"] {
+  --surface-0: #1b1c1f;
+  --surface-1: #222327;
+  --surface-2: #292a2f;
+  --selection: #34363c;
+  --line: #36383d;
+  --line-strong: #7f818a;
+  --ink: #e4e2dc;
+  --ink-bright: #faf8f3;
+  --ink-muted: #a8a7a2;
+  --inverse: #e4e2dc;
+  --on-inverse: #1b1c1f;
+  --focus: #faf8f3;
+  --atmos: var(--ink-bright);
+  --atmos-dim: #6c6d73;
+  --alarm: #ff7b70;
+  --alarm-bg: #3d2322;
+  --on-alarm: #1b1c1f;
+  --ghost: rgba(228,226,220,0.20);
+}
+[data-theme="warehouse"] {
+  --surface-0: #0c0b09;
+  --surface-1: #141310;
+  --surface-2: #1b1a16;
+  --selection: #26241f;
+  --line: #2d2b26;
+  --line-strong: #77736b;
+  --ink: #ebe7dc;
+  --ink-bright: #f7f4ec;
+  --ink-muted: #a09b8f;
+  --inverse: #ebe7dc;
+  --on-inverse: #0c0b09;
+  --focus: #f7f4ec;
+  --atmos: #d4ff3a;
+  --atmos-dim: #6f8a1e;
+  --alarm: #ff4a3d;
+  --alarm-bg: #2c100c;
+  --on-alarm: #0c0b09;
+  --ghost: rgba(235,231,220,0.22);
+}
+[data-theme="squall"] {
+  --surface-0: #111319;
+  --surface-1: #171a21;
+  --surface-2: #1e2129;
+  --selection: #292d37;
+  --line: #2c303a;
+  --line-strong: #767b8a;
+  --ink: #e7e8ec;
+  --ink-bright: #f6f7fa;
+  --ink-muted: #a0a4b1;
+  --inverse: #e7e8ec;
+  --on-inverse: #111319;
+  --focus: #f6f7fa;
+  --atmos: #c7cfff;
+  --atmos-dim: #6f7699;
+  --alarm: #ff665a;
+  --alarm-bg: #34171a;
+  --on-alarm: #111319;
+  --ghost: rgba(231,232,236,0.20);
+}
+[data-theme="paper"] {
+  --surface-0: #ebe8e1;
+  --surface-1: #e2dfd7;
+  --surface-2: #f4f2ec;
+  --selection: #d6d2c8;
+  --line: #cdc9bf;
+  --line-strong: #77736b;
+  --ink: #1a1a19;
+  --ink-bright: #0a0a0a;
+  --ink-muted: #55524c;
+  --inverse: #1a1a19;
+  --on-inverse: #f4f2ec;
+  --focus: #0a0a0a;
+  --atmos: var(--ink-bright);
+  --atmos-dim: #8f8b82;
+  --alarm: #a8180e;
+  --alarm-bg: #f6dcd8;
+  --on-alarm: #ffffff;
+  --ghost: rgba(26,26,25,0.18);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-16: 64px;
+  --row-y: 6px;
+  --control-h: 28px;
+  --measure: 560px;
+  --radius-0: 0;
+  --rule-1: 1px;
+  --rule-2: 2px;
+  --dur-line: 60ms;
+  --dur-blink: 530ms;
+  --dur-beat: 414ms;
+  --dur-hold: 1500ms;
+  --dur-flash: 120ms;
+  --dur-orbit: 2400ms;
+  --texture: 0.07;
+  --font-mono: "JetBrains Mono NL", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-voice: "Roboto Slab", "Rockwell", Georgia, serif;
+  --font-data: var(--font-mono);
+}
+.t-hero { font-family: var(--font-mono); font-size: 64px; line-height: 64px; font-weight: 500; letter-spacing: -0.03em; }
+.t-display { font-family: var(--font-mono); font-size: 28px; line-height: 36px; font-weight: 500; letter-spacing: -0.02em; }
+.t-title { font-family: var(--font-mono); font-size: 18px; line-height: 24px; font-weight: 500; }
+.t-heading { font-family: var(--font-mono); font-size: 14px; line-height: 20px; font-weight: 500; }
+.t-body { font-family: var(--font-mono); font-size: 13px; line-height: 20px; font-weight: 400; }
+.t-label { font-family: var(--font-mono); font-size: 12px; line-height: 16px; font-weight: 400; }
+.t-stencil { font-family: var(--font-mono); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; }
+.t-caption { font-family: var(--font-mono); font-size: 11px; line-height: 16px; font-weight: 400; }
+.t-voice { font-family: var(--font-voice); font-size: 15px; line-height: 23px; font-weight: 400; }

@@ -1,0 +1,49 @@
+/* Map PaperMod onto vendored NTRN Tech v3.2.0; tokens remain unchanged. */
+html[data-theme] {
+  --theme: var(--surface-0); --entry: var(--surface-1);
+  --primary: var(--ink-bright); --secondary: var(--ink-muted);
+  --tertiary: var(--selection); --content: var(--ink);
+  --code-bg: var(--surface-1); --code-block-bg: var(--surface-2);
+  --border: var(--line); --radius: var(--radius-0);
+  --gap: var(--space-8); --main-width: var(--measure); --nav-width: var(--measure);
+}
+html[data-theme], body, body.list { background: var(--surface-0); color: var(--ink); }
+body, button, input, select, textarea, code, pre { font-family: var(--font-mono); }
+body { font-size: 13px; line-height: 1.65; }
+::selection { background: var(--selection); color: var(--ink-bright); }
+* { border-radius: var(--radius-0) !important; box-shadow: none !important; }
+a { color: var(--ink); }
+a:hover { color: var(--ink-bright); }
+a:focus-visible, select:focus-visible { outline: 1px solid var(--focus); outline-offset: 4px; }
+.main { padding-top: var(--space-8); }
+.header { padding: var(--space-8) var(--space-8) 0; }
+.nav { max-width: var(--measure); margin: auto; padding: 0; gap: var(--space-4); line-height: 1.5; }
+.trial-title { width: 100%; font-size: 18px; font-weight: 500; }
+#menu { margin: 0; gap: var(--space-4); }
+#menu li + li { margin: 0; }
+.theme-control { display: flex; align-items: center; gap: var(--space-2); margin-left: auto; color: var(--ink-muted); }
+select { background: var(--surface-1); color: var(--ink); border: 1px solid var(--line-strong); padding: var(--space-1) var(--space-2); }
+.post-title, .first-entry h1 { font-size: 28px; line-height: 1.3; }
+.post-content { font-size: 13px; }
+.post-content h2, .trial-comments h2 { font-size: 18px; margin-top: var(--space-8); }
+.post-content h3 { font-size: 14px; }
+.post-description, .post-meta, .footer { color: var(--ink-muted); font-size: 11px; }
+.first-entry { min-height: 0; margin: var(--space-8) 0; }
+.post-entry { border: 1px solid var(--line); }
+.post-content a, .entry-content a { text-decoration: underline; text-underline-offset: 3px; }
+.post-content img, .post-content video { display: block; width: 100%; height: auto; margin: var(--space-4) 0; border: 1px solid var(--line); }
+.post-content code, .post-content pre { color: var(--ink); background: var(--surface-1); }
+.post-content pre { border: 1px solid var(--line); font-size: 11px; }
+.post-content pre code { background: transparent; }
+/* Chroma retains token weights and italics; colors follow the selected NTRN palette. */
+.post-content .chroma, .post-content .chroma span { color: var(--ink); background: transparent; }
+.post-content .chroma { background: var(--surface-1); }
+.post-content .chroma :is(.k,.kc,.kd,.kn,.kp,.kr,.kt,.nf) { color: var(--ink-bright); font-weight: 500; }
+.post-content .chroma :is(.c,.c1,.cm,.cs,.sd) { color: var(--ink-muted); }
+.trial-callout { background: var(--surface-1); border: 1px solid var(--line); border-left: 2px solid var(--line-strong); padding: var(--space-4); margin: var(--space-4) 0; }
+.trial-callout .callout-title { font-weight: 500; color: var(--ink-bright); margin: 0 0 var(--space-2); }
+.trial-callout p:last-child { margin-bottom: 0; }
+.post-content blockquote { border-color: var(--line-strong); }
+.trial-comments { margin-top: var(--space-8); padding-top: var(--space-4); border-top: 1px solid var(--line); }
+.trial-comments > p { color: var(--ink-muted); font-size: 11px; }
+.post-tags a { background: var(--surface-1); border: 1px solid var(--line); }

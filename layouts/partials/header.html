@@ -1,0 +1,9 @@
+<header class="header">
+  <nav class="nav" aria-label="main">
+    <a class="trial-title" href="{{ "" | absURL }}">{{ site.Title }}</a>
+    <ul id="menu">{{ range site.Menus.main }}
+      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+    {{ end }}</ul>
+    <label class="theme-control">theme <select data-ntrn-theme aria-label="theme"></select></label>
+  </nav>
+</header>

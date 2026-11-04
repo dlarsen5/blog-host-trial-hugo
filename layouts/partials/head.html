@@ -1,0 +1,12 @@
+{{/* PaperMod v8 predates Hugo's partial namespace changes. Keep its CSS, use a current head. */}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+<meta name="description" content="{{ .Description | default site.Title }}">
+{{ with .Params.tags }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ range .AlternativeOutputFormats }}<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}">{{ end }}
+{{ $common := resources.Match "css/common/*.css" | resources.Concat "assets/css/common.css" }}
+{{ $styles := slice (resources.Get "css/core/license.css") (resources.Get "css/core/theme-vars.css") (resources.Get "css/core/reset.css") $common (resources.Get "css/includes/chroma-styles.css") (resources.Get "css/includes/chroma-mod.css") (resources.Get "css/core/zmedia.css") | resources.Concat "assets/css/stylesheet.css" | resources.Minify | fingerprint }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
+{{ partial "extend_head.html" . }}
