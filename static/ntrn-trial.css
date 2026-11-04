@@ -46,4 +46,4 @@ select { background: var(--surface-1); color: var(--ink); border: 1px solid var(
 .post-content blockquote { border-color: var(--line-strong); }
 .trial-comments { margin-top: var(--space-8); padding-top: var(--space-4); border-top: 1px solid var(--line); }
 .trial-comments > p { color: var(--ink-muted); font-size: 11px; }
-.post-tags a { background: var(--surface-1); border: 1px solid var(--line); }
+.post-tags a { background: var(--surface-1); border: 1px solid var(--line); text-transform: lowercase; }
